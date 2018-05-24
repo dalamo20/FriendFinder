@@ -22,7 +22,7 @@
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Best Match</h5>
+                    <h5 class="modal-title" id="myModal">Best Match</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
@@ -168,10 +168,9 @@
     <button type="button" class="btn btn-link">API Friends List</button>
     <button type="button" class="btn btn-link">Github Repo</button>
 
-    <script>$('#myModal').on('shown.bs.modal', function () {
-            $('#myInput').trigger('focus')
-          });
-          $('#myModal').modal(options)</script>
+    <script type="text/javascript">$('#myModal').on('shown.bs.modal', function () {
+            $('#myInput').focus()
+          })</script>
 </body>
 
 </html>
