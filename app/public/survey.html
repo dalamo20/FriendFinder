@@ -18,7 +18,7 @@
     </button> -->
 
     <!-- Modal -->
-    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
@@ -161,12 +161,17 @@
             </select>
         </div>
 
-        <button type="button" class="btn btn-primary btn-lg btn-block" data-toggle="modal" data-target="#exampleModal">
+        <button type="button" class="btn btn-primary btn-lg btn-block" data-toggle="modal" data-target="#myModal">
             <i class="fas fa-check-circle"></i> Submit</button>
     </form>
     <hr>
     <button type="button" class="btn btn-link">API Friends List</button>
     <button type="button" class="btn btn-link">Github Repo</button>
+
+    <script>$('#myModal').on('shown.bs.modal', function () {
+            $('#myInput').trigger('focus')
+          });
+          $('#myModal').modal(options)</script>
 </body>
 
 </html>
