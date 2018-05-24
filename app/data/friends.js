@@ -4,19 +4,19 @@ var friends = [{
     "photo":"/Users/ypham/Desktop/projects/FriendFinder/app/public/images/carrotTop600x470.jpg",
     "scores": [1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
   }, {
-    "name":"George Foreman",
+    "name":"Screech from Save By The Bell",
     "photo":"/Users/ypham/Desktop/projects/FriendFinder/app/public/images/carrotTop600x470.jpg",
     "scores": [2, 2, 2, 2, 2, 2, 2, 2, 2, 2]
   }, {
-    "name":"George Foreman",
+    "name":"Daniel Alamo",
     "photo":"/Users/ypham/Desktop/projects/FriendFinder/app/public/images/carrotTop600x470.jpg",
     "scores": [3, 3, 3, 3, 3, 3, 3, 3, 3, 3]
   }, {
-    "name":"George Foreman",
+    "name":"Morgan Freeman",
     "photo":"/Users/ypham/Desktop/projects/FriendFinder/app/public/images/carrotTop600x470.jpg",
     "scores": [4, 4, 4, 4, 4, 4, 4, 4, 4, 4] 
   }, {
-    "name":"George Foreman",
+    "name":"Samuel M.F. Jackson",
     "photo":"/Users/ypham/Desktop/projects/FriendFinder/app/public/images/carrotTop600x470.jpg",
     "scores": [5, 5, 5, 5, 5, 5, 5, 5, 5, 5]
   }];

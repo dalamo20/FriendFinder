@@ -37,18 +37,17 @@
         </div>
     </div>
 
-
     <h1>Survey Questions</h1>
     <hr>
-    <form>
+    <form method="POST" role="form">
         <h2>About You</h2>
         <div class="form-group">
             <label for="exampleFormControlInput1">Name (Required)</label>
-            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="">
+            <input type="text" class="form-control" id="name" placeholder="">
         </div>
         <div class="form-group">
             <label for="exampleFormControlInput1">Link to Photo Image (Required)</label>
-            <input type="link" class="form-control" id="exampleFormControlInput1" placeholder="">
+            <input type="link" class="form-control" id="link" placeholder="">
         </div>
         <h3>Question 1:</h3>
         <div class="form-group">
@@ -161,16 +160,31 @@
             </select>
         </div>
 
-        <button type="button" class="btn btn-primary btn-lg btn-block" data-toggle="modal" data-target="#myModal">
+        <button type="button" class="btn btn-primary btn-lg btn-block" id ="add-btn" data-toggle="modal" data-target="#myModal">
             <i class="fas fa-check-circle"></i> Submit</button>
     </form>
     <hr>
-    <button type="button" class="btn btn-link">API Friends List</button>
+    <button type="button" class="btn btn-link" href="">API Friends List</button>
     <button type="button" class="btn btn-link">Github Repo</button>
 
-    <script type="text/javascript">$('#myModal').on('shown.bs.modal', function () {
+    <script type="text/javascript">
+        $('#myModal').on('shown.bs.modal', function () {
             $('#myInput').focus()
-          })</script>
+        });
+        $("#add-btn").on("click", function (event) {
+            event.preventDefault();
+            var newCharacter = {
+                name: $("#name").val().trim(),
+                role: $("#link").val().trim(),
+            };
+
+            $.post("/api/new", newCharacter)
+                .then(function (data) {
+                    console.log(data);
+                    alert("Matching friend...");
+                });
+        });
+    </script>
 </body>
 
 </html>
