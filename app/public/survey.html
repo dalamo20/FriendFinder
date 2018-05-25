@@ -12,159 +12,159 @@
 </head>
 
 <body>
-        <div class="modal" id="myModal-1" tabindex="-1" role="dialog">
-                <div class="modal-dialog" role="document">
-                  <div class="modal-content">
-                    <div class="modal-header">
-                      <h5 class="modal-title">Modal title</h5>
-                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+    <div class="modal" id="myModal-1" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Modal title</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
-                      </button>
-                    </div>
-                    <div class="modal-body">
-                      <p>Modal body text goes here.</p>
-                    </div>
-                    <div class="modal-footer">
-                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                      <button type="button" class="btn btn-primary">Save changes</button>
-                    </div>
-                  </div>
+                    </button>
                 </div>
-              </div>
+                <div id="modalText" class="modal-body">
+                    <p>Modal body text goes here.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
-                <h1>Survey Questions</h1>
-                <hr>
-                <form method="POST" role="form">
-                    <h2>About You</h2>
-                    <div class="form-group">
-                        <label for="exampleFormControlInput1">Name (Required)</label>
-                        <input type="text" class="form-control" id="name" placeholder="">
-                    </div>
-                    <div class="form-group">
-                        <label for="exampleFormControlInput1">Link to Photo Image (Required)</label>
-                        <input type="link" class="form-control" id="link" placeholder="">
-                    </div>
-                    <h3>Question 1:</h3>
-                    <div class="form-group">
-                        <label for="exampleFormControlSelect1">Friends always want to be around you.</label>
-                        <select class="form-control" id="exampleFormControlSelect1">
-                            <option>1 (Strongly Disagree)</option>
-                            <option>2 (Disagree)</option>
-                            <option>3 (Neutral)</option>
-                            <option>4 (Agree)</option>
-                            <option>5 (Strongly Agree)</option>
-                        </select>
-                    </div>
-                    <h3>Question 2:</h3>
-                    <div class="form-group">
-                        <label for="exampleFormControlSelect1">You were popular back in school.</label>
-                        <select class="form-control" id="exampleFormControlSelect1">
-                            <option>1 (Strongly Disagree)</option>
-                            <option>2 (Disagree)</option>
-                            <option>3 (Neutral)</option>
-                            <option>4 (Agree)</option>
-                            <option>5 (Strongly Agree)</option>
-                        </select>
-                    </div>
-                    <h3>Question 3:</h3>
-                    <div class="form-group">
-                        <label for="exampleFormControlSelect1">Lived out of your parents house by the age 21.</label>
-                        <select class="form-control" id="exampleFormControlSelect1">
-                            <option>1 (Strongly Disagree)</option>
-                            <option>2 (Disagree)</option>
-                            <option>3 (Neutral)</option>
-                            <option>4 (Agree)</option>
-                            <option>5 (Strongly Agree)</option>
-                        </select>
-                    </div>
-                    <h3>Question 4:</h3>
-                    <div class="form-group">
-                        <label for="exampleFormControlSelect1">People find your jokes funny.</label>
-                        <select class="form-control" id="exampleFormControlSelect1">
-                            <option>1 (Strongly Disagree)</option>
-                            <option>2 (Disagree)</option>
-                            <option>3 (Neutral)</option>
-                            <option>4 (Agree)</option>
-                            <option>5 (Strongly Agree)</option>
-                        </select>
-                    </div>
-                    <h3>Question 5:</h3>
-                    <div class="form-group">
-                        <label for="exampleFormControlSelect1">Had interesting hobbies.</label>
-                        <select class="form-control" id="exampleFormControlSelect1">
-                            <option>1 (Strongly Disagree)</option>
-                            <option>2 (Disagree)</option>
-                            <option>3 (Neutral)</option>
-                            <option>4 (Agree)</option>
-                            <option>5 (Strongly Agree)</option>
-                        </select>
-                    </div>
-                    <h3>Question 6:</h3>
-                    <div class="form-group">
-                        <label for="exampleFormControlSelect1">Avoided comic books. </label>
-                        <select class="form-control" id="exampleFormControlSelect1">
-                            <option>1 (Strongly Disagree)</option>
-                            <option>2 (Disagree)</option>
-                            <option>3 (Neutral)</option>
-                            <option>4 (Agree)</option>
-                            <option>5 (Strongly Agree)</option>
-                        </select>
-                    </div>
-                    <h3>Question 7:</h3>
-                    <div class="form-group">
-                        <label for="exampleFormControlSelect1">Takes part of physical activity. </label>
-                        <select class="form-control" id="exampleFormControlSelect1">
-                            <option>1 (Strongly Disagree)</option>
-                            <option>2 (Disagree)</option>
-                            <option>3 (Neutral)</option>
-                            <option>4 (Agree)</option>
-                            <option>5 (Strongly Agree)</option>
-                        </select>
-                    </div>
-                    <h3>Question 8:</h3>
-                    <div class="form-group">
-                        <label for="exampleFormControlSelect1">You use foul language often.</label>
-                        <select class="form-control" id="exampleFormControlSelect1">
-                            <option>1 (Strongly Disagree)</option>
-                            <option>2 (Disagree)</option>
-                            <option>3 (Neutral)</option>
-                            <option>4 (Agree)</option>
-                            <option>5 (Strongly Agree)</option>
-                        </select>
-                    </div>
-                    <h3>Question 9:</h3>
-                    <div class="form-group">
-                        <label for="exampleFormControlSelect1">Picked first in team activities.</label>
-                        <select class="form-control" id="exampleFormControlSelect1">
-                            <option>1 (Strongly Disagree)</option>
-                            <option>2 (Disagree)</option>
-                            <option>3 (Neutral)</option>
-                            <option>4 (Agree)</option>
-                            <option>5 (Strongly Agree)</option>
-                        </select>
-                    </div>
-                    <h3>Question 10:</h3>
-                    <div class="form-group">
-                        <label for="exampleFormControlSelect1">People will follow your wisdom. </label>
-                        <select class="form-control" id="exampleFormControlSelect1">
-                            <option>1 (Strongly Disagree)</option>
-                            <option>2 (Disagree)</option>
-                            <option>3 (Neutral)</option>
-                            <option>4 (Agree)</option>
-                            <option>5 (Strongly Agree)</option>
-                        </select>
-                    </div>
-            <button id="submit" class="btn btn-info btn-primary btn-large btn-block" data-toggle="modal" data-target="#myModal-1">Submit</button>
-                </form>
-                <hr>
-                <button type="button" class="btn btn-link" href="">API Friends List</button>
-                <button type="button" class="btn btn-link">Github Repo</button>
-
-                <script type="text/javascript">
-                    $('#myModal-1').on('shown.bs.modal', function () {
-                        $('#myInput').focus()
-                    })
-                </script>
+    <h1>Survey Questions</h1>
+    <hr>
+    <form method="POST" role="form">
+        <h2>About You</h2>
+        <div class="form-group">
+            <label for="exampleFormControlInput1">Name (Required)</label>
+            <input type="text" class="form-control" id="name" placeholder="">
+        </div>
+        <div class="form-group">
+            <label for="exampleFormControlInput1">Link to Photo Image (Required)</label>
+            <input type="link" class="form-control" id="link" placeholder="">
+        </div>
+        <h3>Question 1:</h3>
+        <div class="form-group">
+            <label for="exampleFormControlSelect1">Friends always want to be around you.</label>
+            <select class="form-control" id="exampleFormControlSelect1">
+                <option>1 (Strongly Disagree)</option>
+                <option>2 (Disagree)</option>
+                <option>3 (Neutral)</option>
+                <option>4 (Agree)</option>
+                <option>5 (Strongly Agree)</option>
+            </select>
+        </div>
+        <h3>Question 2:</h3>
+        <div class="form-group">
+            <label for="exampleFormControlSelect1">You were popular back in school.</label>
+            <select class="form-control" id="exampleFormControlSelect1">
+                <option>1 (Strongly Disagree)</option>
+                <option>2 (Disagree)</option>
+                <option>3 (Neutral)</option>
+                <option>4 (Agree)</option>
+                <option>5 (Strongly Agree)</option>
+            </select>
+        </div>
+        <h3>Question 3:</h3>
+        <div class="form-group">
+            <label for="exampleFormControlSelect1">Lived out of your parents house by the age 21.</label>
+            <select class="form-control" id="exampleFormControlSelect1">
+                <option>1 (Strongly Disagree)</option>
+                <option>2 (Disagree)</option>
+                <option>3 (Neutral)</option>
+                <option>4 (Agree)</option>
+                <option>5 (Strongly Agree)</option>
+            </select>
+        </div>
+        <h3>Question 4:</h3>
+        <div class="form-group">
+            <label for="exampleFormControlSelect1">People find your jokes funny.</label>
+            <select class="form-control" id="exampleFormControlSelect1">
+                <option>1 (Strongly Disagree)</option>
+                <option>2 (Disagree)</option>
+                <option>3 (Neutral)</option>
+                <option>4 (Agree)</option>
+                <option>5 (Strongly Agree)</option>
+            </select>
+        </div>
+        <h3>Question 5:</h3>
+        <div class="form-group">
+            <label for="exampleFormControlSelect1">Had interesting hobbies.</label>
+            <select class="form-control" id="exampleFormControlSelect1">
+                <option>1 (Strongly Disagree)</option>
+                <option>2 (Disagree)</option>
+                <option>3 (Neutral)</option>
+                <option>4 (Agree)</option>
+                <option>5 (Strongly Agree)</option>
+            </select>
+        </div>
+        <h3>Question 6:</h3>
+        <div class="form-group">
+            <label for="exampleFormControlSelect1">Avoided comic books. </label>
+            <select class="form-control" id="exampleFormControlSelect1">
+                <option>1 (Strongly Disagree)</option>
+                <option>2 (Disagree)</option>
+                <option>3 (Neutral)</option>
+                <option>4 (Agree)</option>
+                <option>5 (Strongly Agree)</option>
+            </select>
+        </div>
+        <h3>Question 7:</h3>
+        <div class="form-group">
+            <label for="exampleFormControlSelect1">Takes part of physical activity. </label>
+            <select class="form-control" id="exampleFormControlSelect1">
+                <option>1 (Strongly Disagree)</option>
+                <option>2 (Disagree)</option>
+                <option>3 (Neutral)</option>
+                <option>4 (Agree)</option>
+                <option>5 (Strongly Agree)</option>
+            </select>
+        </div>
+        <h3>Question 8:</h3>
+        <div class="form-group">
+            <label for="exampleFormControlSelect1">You use foul language often.</label>
+            <select class="form-control" id="exampleFormControlSelect1">
+                <option>1 (Strongly Disagree)</option>
+                <option>2 (Disagree)</option>
+                <option>3 (Neutral)</option>
+                <option>4 (Agree)</option>
+                <option>5 (Strongly Agree)</option>
+            </select>
+        </div>
+        <h3>Question 9:</h3>
+        <div class="form-group">
+            <label for="exampleFormControlSelect1">Picked first in team activities.</label>
+            <select class="form-control" id="exampleFormControlSelect1">
+                <option>1 (Strongly Disagree)</option>
+                <option>2 (Disagree)</option>
+                <option>3 (Neutral)</option>
+                <option>4 (Agree)</option>
+                <option>5 (Strongly Agree)</option>
+            </select>
+        </div>
+        <h3>Question 10:</h3>
+        <div class="form-group">
+            <label for="exampleFormControlSelect1">People will follow your wisdom. </label>
+            <select class="form-control" id="exampleFormControlSelect1">
+                <option>1 (Strongly Disagree)</option>
+                <option>2 (Disagree)</option>
+                <option>3 (Neutral)</option>
+                <option>4 (Agree)</option>
+                <option>5 (Strongly Agree)</option>
+            </select>
+        </div>
+        <button id="submit" class="btn btn-info btn-primary btn-large btn-block" data-toggle="modal" data-target="#myModal-1">Submit</button>
+    </form>
+    <hr>
+    <p>
+        <a href="/api/friends">API Friends List</a> |
+        <a href="https://github.com/dalamo20/FriendFinder">GitHub Repo</a>
+    </p>
+    <script type="text/javascript">
+        $('#myModal-1').on('shown.bs.modal', function () {
+            $('#myInput').focus()
+        })
+    </script>
 </body>
-
 </html>
