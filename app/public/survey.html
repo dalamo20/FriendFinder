@@ -9,6 +9,11 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
         crossorigin="anonymous">
     <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+
 </head>
 
 <body>
@@ -22,7 +27,8 @@
                     </button>
                 </div>
                 <div id="modalText" class="modal-body">
-                    <p>Modal body text goes here.</p>
+                    <p id="insertFriend"></p>
+                    <img src="" alt="" id="insertImg">
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -165,39 +171,42 @@
         $('#myModal-1').on('shown.bs.modal', function () {
             $('#myInput').focus()
         })
-        $("#submit").on("click", function(event) {
-      event.preventDefault();
+        $("#submit").on("click", function (event) {
+            event.preventDefault();
 
-      // Here we grab the form elements
-      var questionList = {
-        name: $("#name").val().trim(),
-        photo: $("#photolink").val().trim(),
-        question1: $("#q1").val().trim(),
-        question2: $("#q2").val().trim(),
-        question3: $("#q3").val().trim(),
-        question4: $("#q4").val().trim(),
-        question5: $("#q5").val().trim(),
-        question6: $("#q6").val().trim(),
-        question7: $("#q7").val().trim(),
-        question8: $("#q8").val().trim(),
-        question9: $("#q9").val().trim(),
-        question10: $("#q10").val().trim()
-      };
+            // Here we grab the form elements
+            var scores = [];
+            for (var i = 1; i < 11; i++) {
+                var question = parseInt($("#q" + i).val().trim().charAt(0))
+                scores.push(question)
 
-      $.post("/api/friends", questionList,
-        function(data) {
-          if (data) {
-            alert("You're secret match is...");
-            $("#modalText").append()
-          }
-          else {
-            alert("No matches for you!");
-          }
-          // Clear the form when submitting
-          $("#name").val("");
-          $("#photolink").val("");
+            }
+
+            var userAnswers = {
+                name: $("#name").val().trim(),
+                photo: $("#photolink").val().trim(),
+                scores: scores
+            };
+
+            console.log(userAnswers);
+
+            $.post("/api/friends", userAnswers,
+                function (data) {
+                    if (data) {
+                        console.log(data);
+                        // alert("You're secret match is...");
+                        $("#insertFriend").text(data.name);
+                        $("#insertImg").attr('src', data.photo);
+                    }
+                    else {
+                        alert("No matches for you!");
+                    }
+                    // Clear the form when submitting
+                    $("#name").val("");
+                    $("#photolink").val("");
+                });
         });
-    });
     </script>
 </body>
+
 </html>

@@ -5,15 +5,36 @@
 
 var friends = require("../data/friends");
 
-module.exports = function(app) {
-  app.get("/api/friends", function(req, res) {
+module.exports = function (app) {
+  app.get("/api/friends", function (req, res) {
     res.json(friends);
   });
 
-  app.post("/api/friends", function(req, res) {
-    if (friends.length) {
-      friends.push(req.body);
-      res.json(true);
-    }
+  app.post("/api/friends", function (req, res) {
+    // console.log(req.body);
+    var userAnswers = req.body;
+    //after quiz
+    var bestFriend;
+    var difference = Infinity;
+    // create own function and insert below
+
+    friends.forEach(friend => {
+      var answer = 0;
+      for (var i = 0; i < userAnswers.scores.length; i++) {
+
+        var compare = Math.abs(userAnswers.scores[i] - friend.scores[i]);
+        answer += compare
+      }
+      if (answer < difference) {
+        difference = answer;
+        bestFriend = friend
+      }
+      console.log(bestFriend);
+    });
+
+    friends.push(userAnswers);
+    res.json(bestFriend);
   });
 };
+
+
